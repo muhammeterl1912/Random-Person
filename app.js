@@ -8,6 +8,7 @@ const adress = document.querySelector(".adress span");
 const phone = document.querySelector(".phone span");
 const button = document.querySelector("button");
 
+// Fetch
 fetch("https://randomuser.me/api/")
   .then((response) => response.json())
   .then((data) => {
@@ -25,5 +26,6 @@ fetch("https://randomuser.me/api/")
   .catch((error) => {
     console.error("Hata:", error);
   });
+//   Event
 button.addEventListener("click",()=>{location.reload();
 })
