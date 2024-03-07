@@ -10,7 +10,12 @@ const button = document.querySelector("button");
 
 // Fetch
 fetch("https://randomuser.me/api/")
-  .then((response) => response.json())
+  .then((response) => {
+if(!response.ok){
+  throw new Error("Something went wrong!")
+}
+   return  response.json()
+  })
   .then((data) => {
     let result = data.results[0];
     console.log(result);
@@ -24,7 +29,7 @@ fetch("https://randomuser.me/api/")
     phone.textContent += result.phone;
   })
   .catch((error) => {
-    console.error("Hata:", error);
+  document.write()
   });
 //   Event
 button.addEventListener("click",()=>{location.reload();
