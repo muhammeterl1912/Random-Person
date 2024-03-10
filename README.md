@@ -10,7 +10,6 @@ This project is a random person generator that utilizes the Fetch API along with
 
 
 ## Demo
-
 https://muhammeterl1912.github.io/Random-Person-Genarator/
 
 
